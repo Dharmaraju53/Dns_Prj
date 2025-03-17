@@ -47,7 +47,7 @@ class Configurator:
         Configurator.IP = Configurator.get_ip()
         Configurator.TCP_PORT = tcp_port
         Configurator.UDP_PORT = udp_port
-        os.system("clear")
+        os.system("cls" if os.name == "nt" else "clear")
 
     @staticmethod
     def config_others(num_partners: int):
@@ -58,7 +58,7 @@ class Configurator:
             udp_port = int(input("UDP port number: "))
             tcp_port = int(input("TCP port number: "))
             Configurator.OTHERS.append(dict(ip=ip, udp=udp_port, tcp=tcp_port))
-        os.system("clear")
+        os.system("cls" if os.name == "nt" else "clear")
 
     @staticmethod
     def set_buffer_size(size: int):
