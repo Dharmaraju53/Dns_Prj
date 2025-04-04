@@ -19,7 +19,7 @@ def resolve(domain: str, protocol: str = "udp"):
     Calls UserScript.py with the given domain & protocol, then returns the response.
     """
     try:
-        command = ["python", "UserScript.py", "-d", domain, "--ip", "192.168.0.155", "--port", "9292", "--protocol", protocol]
+        command = ["python", "UserScript.py", "-d", domain, "--ip", "192.168.17.149", "--port", "9292", "--protocol", protocol]
         result = subprocess.run(command, capture_output=True, text=True)
 
         return {"domain": domain, "protocol": protocol, "response": result.stdout}
